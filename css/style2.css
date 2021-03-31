@@ -1,0 +1,158 @@
+@charset "UTF-8";
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+header {
+  height: 80px;
+  background-color: deepskyblue;
+  color: #fff;
+}
+header nav {
+  position: relative;
+}
+header nav p {
+  position: absolute;
+  left: 50%;
+  line-height: 70px;
+}
+header nav ul {
+  display: flex;
+  line-height: 70px;
+  float: right;
+  list-style: none;
+}
+header nav ul li {
+  margin-right: 10px;
+}
+.main-visual {
+  height: 800px;
+  z-index: 8;
+}
+
+#hm-icon {
+  position: fixed;
+  left: 20px;
+  top: 20px;
+  z-index: 110;
+}
+.menu-trigger,
+.menu-trigger span {
+  display: inline-block;
+  transition: all 0.4s;
+  box-sizing: border-box;
+}
+.menu-trigger {
+  position: relative;
+  width: 50px;
+  height: 44px;
+}
+.menu-trigger span {
+  position: absolute;
+  left: 0;
+  width: 100%;
+  height: 4px;
+  background-color: #fff;
+  border-radius: 4px;
+}
+.menu-trigger span:nth-child(1) {
+  top: 0;
+}
+.menu-trigger span:nth-child(2) {
+  top: 20px;
+}
+.menu-trigger span:nth-child(3) {
+  bottom: 0;
+}
+.menu-trigger.active span:nth-child(1) {
+  -webkit-transform: translateY(20px) rotate(-45deg);
+  transform: translateY(20px) rotate(-45deg);
+  background-color: #fff;
+}
+.menu-trigger.active span:nth-child(2) {
+  opacity: 0;
+}
+.menu-trigger.active span:nth-child(3) {
+  -webkit-transform: translateY(-20px) rotate(45deg);
+  transform: translateY(-20px) rotate(45deg);
+  background-color: #fff;
+}
+
+#sp-menu {
+  position: fixed;
+  top: 0;
+  left: 0;
+  background: #87ceeb;
+  color: #fff;
+  width: 20%;
+  min-height: 100%;
+  display: none;
+  z-index: 100;
+}
+#sp-menu li {
+  text-align: center;
+  margin-bottom: 30px;
+}
+#sp-menu a {
+  color: #fff;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+main {
+  background-color: deepskyblue;
+  color: #fff;
+}
+
+.fade-block1 {
+  display: block;
+  height: 300px;
+  font-size: 64px;
+  text-align: center;
+  opacity: 0;
+  transform: translateY(-200px);
+  transition: all 1.5s;
+  padding-top: 50px;
+}
+.fade-block1.blockIn {
+  opacity: 1;
+  transform: translateY(0);
+}
+.top1 {
+  margin: 100px auto;
+  height: 500px;
+}
+.text1 {
+  float: left;
+  margin-left: 15%;
+}
+.top1 h2 {
+  font-size: 40px;
+  margin-bottom: 20px;
+}
+.image1 {
+  display: block;
+  height: 350px;
+  float: right;
+  margin-right: 15%;
+  opacity: 0;
+  transform: translateX(200px);
+  transition: all 1.5s;
+  border-radius: 30px;
+}
+.image1.blockIn {
+  opacity: 1;
+  transform: translateX(0);
+}
+.fade-block2 {
+  opacity: 0;
+  transform: translateX(-200px);
+  transition: all 1.5s;
+}
+.fade-block2.blockIn {
+  opacity: 1;
+  transform: translateX(0);
+}
