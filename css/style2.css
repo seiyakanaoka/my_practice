@@ -6,7 +6,9 @@
   box-sizing: border-box;
 }
 
+/* header */
 header {
+  width: 100%;
   height: 80px;
   background-color: deepskyblue;
   color: #fff;
@@ -16,8 +18,11 @@ header nav {
 }
 header nav p {
   position: absolute;
-  left: 50%;
+  left: 45%;
   line-height: 70px;
+  font-size: 30px;
+  text-align: center;
+  font-family: "Kaushan Script", cursive;
 }
 header nav ul {
   display: flex;
@@ -27,11 +32,22 @@ header nav ul {
 }
 header nav ul li {
   margin-right: 10px;
+  font-size: 20px;
 }
+
+/* header */
+
+/* .main-visual */
+
 .main-visual {
+  width: 100%;
   height: 800px;
   z-index: 8;
 }
+
+/* .main-visual */
+
+/* ハンバーガー */
 
 #hm-icon {
   position: fixed;
@@ -42,7 +58,7 @@ header nav ul li {
 .menu-trigger,
 .menu-trigger span {
   display: inline-block;
-  transition: all 0.4s;
+  transition: all 1s;
   box-sizing: border-box;
 }
 .menu-trigger {
@@ -85,16 +101,23 @@ header nav ul li {
   position: fixed;
   top: 0;
   left: 0;
-  background: #87ceeb;
+  background: rgba(135, 206, 235, 0.8);
   color: #fff;
   width: 20%;
   min-height: 100%;
   display: none;
   z-index: 100;
-}
-#sp-menu li {
   text-align: center;
+}
+#sp-menu h2 {
+  margin-top: 60px;
   margin-bottom: 30px;
+  opacity: 1;
+}
+
+#sp-menu li {
+  margin-bottom: 30px;
+  opacity: 1;
 }
 #sp-menu a {
   color: #fff;
@@ -102,57 +125,91 @@ header nav ul li {
   font-weight: bold;
 }
 
-main {
+/* ハンバーガー */
+
+.main {
+  width: 100%;
   background-color: deepskyblue;
   color: #fff;
 }
 
-.fade-block1 {
-  display: block;
-  height: 300px;
+.fade-block {
   font-size: 64px;
   text-align: center;
   opacity: 0;
   transform: translateY(-200px);
   transition: all 1.5s;
   padding-top: 50px;
+  font-family: "Kaushan Script", cursive;
 }
-.fade-block1.blockIn {
+.fade-block.blockIn {
   opacity: 1;
   transform: translateY(0);
 }
-.top1 {
-  margin: 100px auto;
-  height: 500px;
+.top {
+  display: flex;
+  justify-content: center;
+  margin: 300px auto;
 }
-.text1 {
-  float: left;
-  margin-left: 15%;
-}
-.top1 h2 {
+.top h2 {
   font-size: 40px;
   margin-bottom: 20px;
 }
+.text {
+  padding-top: 50px;
+}
 .image1 {
-  display: block;
-  height: 350px;
-  float: right;
-  margin-right: 15%;
-  opacity: 0;
-  transform: translateX(200px);
-  transition: all 1.5s;
+  width: 600px;
+  height: auto;
   border-radius: 30px;
+  margin-left: 50px;
 }
-.image1.blockIn {
-  opacity: 1;
-  transform: translateX(0);
-}
-.fade-block2 {
+.fade-block1-1 {
   opacity: 0;
   transform: translateX(-200px);
   transition: all 1.5s;
 }
-.fade-block2.blockIn {
+.fade-block1-1.blockIn {
   opacity: 1;
   transform: translateX(0);
+}
+.fade-block1-2 {
+  opacity: 0;
+  transform: translateX(200px);
+  transition: all 1.5s;
+}
+.fade-block1-2.blockIn {
+  opacity: 1;
+  transform: translateX(0);
+}
+.image2 {
+  width: 600px;
+  height: auto;
+  border-radius: 30px;
+  margin-right: 50px;
+}
+.fade-block2-1 {
+  opacity: 0;
+  transform: translateX(-200px);
+  transition: all 1.5s;
+}
+.fade-block2-1.blockIn {
+  opacity: 1;
+  transform: translateX(0);
+}
+.fade-block2-2 {
+  opacity: 0;
+  transform: translateX(200px);
+  transition: all 1.5s;
+}
+.fade-block2-2.blockIn {
+  opacity: 1;
+  transform: translateX(0);
+}
+.go {
+  text-align: center;
+}
+.go h1 {
+  font-size: 60px;
+  margin-bottom: 20px;
 }

@@ -1,3 +1,4 @@
+//ハンバーガー------------>
 $(function(){
   $('.menu-trigger').on('click',function(event){
     $(this).toggleClass('active');
@@ -5,6 +6,7 @@ $(function(){
     event.PreventDefault();
   });
 });
+// ハンバーガー----------->
 
 $(".theTarget").skippr({
   transition:'fade',
@@ -32,7 +34,7 @@ $(function(){
   });
 });
 
-$('main').ripples({
+$('.main').ripples({
   dropRadius: 20, //波紋の大きさ
   resolution: 500, //波紋の広がり速度
   perturbance: 0.5, //波紋のブレ
